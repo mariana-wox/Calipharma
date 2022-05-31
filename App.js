@@ -91,14 +91,14 @@ const App = () => {
           }}
         />
         <Stack.Screen
-          name="Medicamento"
+          name="medicamento"
           component={medicamento}
           options={{
             title: "Información del Medicamento",
           }}
         />
         <Stack.Screen
-          name="Banco"
+          name="BancoMed"
           component={BancoMed}
           options={{
             title: "Bancos de Medicamento",
