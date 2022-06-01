@@ -11,24 +11,24 @@ const FirebaseState = props => {
 
     // Crear state inicial
     const initialState = {
-        catalogo: []
+        menu: []
     }
 
     // useReducer con dispatch  para ejecutar las funciones
     const [ state, dispatch ] = useReducer(FirebaseReducer, initialState);
 
     // Función que se ejecuta para traer los productos
-    const obtenerMedicamentos = () => {
+    const obtenerProductos = () => {
   
 
         // consultar firebase
         firebase.db
-            .collection('medicamentos')
+            .collection('productos')
             .where('existencia', '==', true) // traer solo los que esten en existencia
             .onSnapshot(manejarSnapshot);
 
         function manejarSnapshot(snapshot) {
-            let medicamentos = snapshot.docs.map(doc => {
+            let platillos = snapshot.docs.map(doc => {
                 return {
                     id: doc.id,
                     ...doc.data()
@@ -36,14 +36,14 @@ const FirebaseState = props => {
             });
 
             // Ordenar por categoria con lodash
-            medicamentos = _.sortBy(medicamentos, 'categoria');
+            platillos = _.sortBy(platillos, 'categoria');
 
-            // console.log(medicamentos)
+            // console.log(platillos)
 
             // Tenemos resultados de la base de datos
             dispatch({
                 type: OBTENER_PRODUCTOS_EXITO,
-                payload: medicamentos
+                payload: platillos
             });
         }
     }
@@ -52,9 +52,9 @@ const FirebaseState = props => {
     return (
         <FirebaseContext.Provider
             value={{
-                catalogo: state.catalogo,
+                menu: state.menu,
                 firebase,
-                obtenerMedicamentos
+                obtenerProductos
             }}
         >
             {props.children}
