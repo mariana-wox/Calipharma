@@ -16,6 +16,7 @@ import BancoMed from "./Screens/BancoMed";
 import donacion from "./Screens/donacion";
 import Ayuda from "./Screens/Ayuda";
 import Mapa from "./Screens/Mapa";
+import { NativeBaseProvider } from "native-base";
 
 
 
@@ -23,6 +24,7 @@ const Stack = createNativeStackNavigator();
 
 const App = () => {
   return (
+    <NativeBaseProvider>
     <NavigationContainer>
       <Stack.Navigator initialRouteName="Inicio">
         <Stack.Screen
@@ -130,6 +132,7 @@ const App = () => {
         />
       </Stack.Navigator>
     </NavigationContainer>
+    </NativeBaseProvider>
   );
 }
 

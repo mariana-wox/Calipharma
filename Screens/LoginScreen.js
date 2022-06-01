@@ -9,7 +9,7 @@ const Login = ({ navigation }) => {
   return (
     <View style={styles.container}>
       <Image
-        source={{ uri: 'https://simg.nicepng.com/png/small/202-2022264_usuario-annimo-usuario-annimo-user-icon-png-transparent.png' }}
+        source={{ uri: '/src/Logo.png' }}
         style={styles.image}
       />
       <Text style={{ color: '#18181b', fontSize: 22, fontWeight: 'bold', paddingTop: 10, paddingBottom: 14 }}> Inciar Sesión </Text>
