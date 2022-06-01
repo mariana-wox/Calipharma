@@ -27,10 +27,10 @@ function NuevoUs  () {
 
   return ( 
     <Center w="100%">
-    <Box safeArea p="2" py="8" w="90%" maxW="400">
+    <Box safeArea p="2" py="8" w="90%" maxW="500">
       
-      
-  <div align= "center">  <Image style={{ width: 280, height: 280, marginBottom: 15 }} source={require("/src/Logo.png")}/>
+   <div align= "center">  <Image style={{ width: 303, height: 108, marginBottom: 15 }} source={require("../LogoO.png")}/>
+ 
       </div>
       
       <div align= "center">

@@ -9,7 +9,7 @@ const Login = ({ navigation }) => {
   return (
     <View style={styles.container}>
       <Image
-        source={{ uri: '/src/Logo.png' }}
+        source={{ uri: "../Logo.png" }}
         style={styles.image}
       />
       <Text style={{ color: '#18181b', fontSize: 22, fontWeight: 'bold', paddingTop: 10, paddingBottom: 14 }}> Inciar Sesión </Text>
