@@ -26,6 +26,9 @@ const Menu = ({ navigation }) => {
     <Link style={styles.link1} to={{ screen: 'FarmaciaScreen' }}>
       Buscar farmacias
     </Link>
+    <Link style={styles.link1} to={{ screen: 'Mapa' }}>
+      Mapa Farmacias
+    </Link>
     <Divider style={{width:"95%", marginTop: 30}}/>
     <Link style={styles.link2} to={{ screen: 'Inicio' }}>
       Ajustes

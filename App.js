@@ -15,6 +15,7 @@ import medicamento from "./Screens/medicamento";
 import BancoMed from "./Screens/BancoMed";
 import donacion from "./Screens/donacion";
 import Ayuda from "./Screens/Ayuda";
+import Mapa from "./Screens/Mapa";
 
 const Stack = createNativeStackNavigator();
 
@@ -116,6 +117,13 @@ const App = () => {
           component={Ayuda}
           options={{
             title: "Centro de Ayuda",
+          }}
+        />
+        <Stack.Screen
+          name="Mapa"
+          component={Mapa}
+          options={{
+            title: "Mapa Farmacias",
           }}
         />
       </Stack.Navigator>
