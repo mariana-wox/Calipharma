@@ -17,7 +17,8 @@ import donacion from "./Screens/donacion";
 import Ayuda from "./Screens/Ayuda";
 import Mapa from "./Screens/Mapa";
 
-//s
+
+
 const Stack = createNativeStackNavigator();
 
 const App = () => {

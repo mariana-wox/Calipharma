@@ -1,6 +1,7 @@
 import * as React from "react";
 import { View, SafeAreaView, StyleSheet, TextInput, Image, Text, TouchableOpacity} from "react-native";
 
+
 const Registro = ({ navigation }) => {
   const [text, onChangeText] = React.useState("Correo Electrónico");
   const [text1, onChangeText1] = React.useState("Contraseña");
